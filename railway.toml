@@ -1,0 +1,14 @@
+# railway.toml
+[build]
+builder = "NIXPACKS"
+nixpacksConfigPath = "nixpacks.toml"
+
+[deploy]
+runtime = "V2"
+numReplicas = 1
+healthcheckPath = "/docs"
+sleepApplication = false
+multiRegionConfig = { "asia-southeast1-eqsg3a" = { numReplicas = 1 } }
+restartPolicyType = "ON_FAILURE"
+healthcheckTimeout = 300
+restartPolicyMaxRetries = 10
