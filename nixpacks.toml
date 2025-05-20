@@ -1,5 +1,4 @@
-[phases.setup]
-nixPkgs = ["python311Full", "nodejs"]
+
 
 [phases.install]
 cmds = [
