@@ -1,16 +1,11 @@
-
-
 [phases.install]
 cmds = [
   "python3 -m venv /venv",
-  "/venv/bin/python3 -m pip install --upgrade pip",
-  "/venv/bin/python3 -m pip install -r requirements.txt",
-  "ls /venv/bin",  # Debugging
-  "ls /venv/lib/python3.11/site-packages",  # Debugging
-  "npm ci"
+  "/venv/bin/pip install --upgrade pip",
+  "/venv/bin/pip install -r requirements.txt"
 ]
 
 [phases.start]
 cmds = [
-  "/venv/bin/python3 -m uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+  "/venv/bin/python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT"
 ]
