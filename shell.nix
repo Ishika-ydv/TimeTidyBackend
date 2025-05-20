@@ -5,6 +5,10 @@ let
     pip
     setuptools
     wheel
+    uvicorn
+    fastapi
+    python-dotenv
+    pydantic
   ]);
 in
 
@@ -15,10 +19,6 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    # Create a virtual environment in the root directory
-    python3 -m venv ./venv
-    # Activate the virtual environment
-    source ./venv/bin/activate
-    echo "✅ Custom Python 3.11 environment and virtual environment loaded"
+    echo "✅ Custom Python 3.11 environment loaded"
   '';
 }
