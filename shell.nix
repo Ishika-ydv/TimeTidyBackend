@@ -1,16 +1,20 @@
 { pkgs ? import <nixpkgs> {} }:
 
+let
+  pythonEnv = pkgs.python311.withPackages (ps: with ps; [
+    pip
+    setuptools
+    wheel
+  ]);
+in
+
 pkgs.mkShell {
   buildInputs = [
-  pkgs.python311Full
-  pkgs.nodejs_18
-  pkgs.python311Packages.pip
-  pkgs.python311Packages.setuptools
-  pkgs.python311Packages.wheel
-];
-
+    pythonEnv
+    pkgs.nodejs_18
+  ];
 
   shellHook = ''
-    echo "✅ Custom Nix environment loaded"
+    echo "✅ Custom Python 3.11 environment loaded"
   '';
 }
