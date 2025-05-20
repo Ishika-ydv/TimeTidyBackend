@@ -5,8 +5,8 @@ let
     pip
     setuptools
     wheel
-    uvicorn
     fastapi
+    uvicorn
     python-dotenv
     pydantic
   ]);
