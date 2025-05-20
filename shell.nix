@@ -7,8 +7,8 @@ let
     wheel
     fastapi
     uvicorn
-    python-dotenv
     pydantic
+    python-dotenv
   ]);
 in
 
@@ -19,6 +19,6 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    echo "✅ Custom Python 3.11 environment loaded"
+    echo "✅ Custom Python 3.11 shell loaded."
   '';
 }

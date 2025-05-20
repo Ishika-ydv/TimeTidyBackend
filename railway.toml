@@ -1,6 +1,8 @@
+# railway.toml
 [build]
 builder = "NIXPACKS"
 nixpacksConfigPath = "nixpacks.toml"
+nixpacksVersion = "1.24.0"
 
 [deploy]
 runtime = "V2"
